@@ -47,6 +47,17 @@ var swiperProducts = new Swiper(".new__container", {
     },
     });
 
+// ================== IMG GALLERY ==================
+function imgGallery(){
+    const mainImg = document.querySelector('.details__img'),
+        smallImg = document.querySelectorAll('.details__small-img')
+    smallImg.forEach((img)=>{
+        img.addEventListener('click', function(){
+            mainImg.src= this.src
+        })
+    })
+}
+imgGallery()
 // ================== PRODUCTS ==================
 const tabs= document.querySelectorAll('[data-target]'),
     tabContents = document.querySelectorAll('[content]')
